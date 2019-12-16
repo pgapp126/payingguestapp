@@ -18,7 +18,7 @@
         android:text="Verify Account" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/edt_verificationcode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -28,7 +28,7 @@
         android:inputType="phone" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"

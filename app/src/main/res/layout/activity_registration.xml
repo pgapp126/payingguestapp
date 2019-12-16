@@ -18,7 +18,7 @@
         android:text="Sign Up" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edt_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -30,7 +30,7 @@
         tools:layout_editor_absoluteY="-9dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edt_contactno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -42,7 +42,7 @@
         tools:layout_editor_absoluteY="45dp" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edt_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -54,7 +54,7 @@
         tools:layout_editor_absoluteY="114dp" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/edt_psw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -64,7 +64,7 @@
         android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/edt_confirmpsw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -74,7 +74,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
