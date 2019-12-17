@@ -2,6 +2,7 @@ package com.example.pgapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,8 @@ public class VerificationActivity extends AppCompatActivity {
                     return;
                 }
 
+                Intent i=new Intent(VerificationActivity.this,ResetpasswordActivity.class);
+                startActivity(i);
 
 
             }

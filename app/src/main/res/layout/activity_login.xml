@@ -38,6 +38,16 @@
         android:textSize="18sp"
         android:hint="Password"
         android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/txt_forgotpsw"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:text="Forgotpassword..?" />
 
     <Button
         android:id="@+id/btn_login"
@@ -45,4 +55,14 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="Login" />
+    <TextView
+        android:id="@+id/txt_signup"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:text="Dont have an account? Register here." />
+
 </LinearLayout>
