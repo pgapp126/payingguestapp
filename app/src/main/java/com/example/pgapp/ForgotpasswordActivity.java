@@ -7,12 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.pgapp.utils.Commonfunction;
+import com.example.pgapp.utils.Constants;
+import com.example.pgapp.utils.DataInterface;
+import com.example.pgapp.utils.Webservice_Volley;
 
-public class ForgotpasswordActivity extends AppCompatActivity {
+import org.json.JSONObject;
+
+import java.util.HashMap;
+
+public class ForgotpasswordActivity extends AppCompatActivity implements DataInterface {
     EditText edt_contactno;
     Button btn_submit;
+
+    Webservice_Volley volley;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +31,7 @@ public class ForgotpasswordActivity extends AppCompatActivity {
         edt_contactno=(EditText)findViewById(R.id.edt_contactno);
         btn_submit=(Button) findViewById(R.id.btn_submit);
 
+        volley=new Webservice_Volley(this,this);
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,11 +41,19 @@ public class ForgotpasswordActivity extends AppCompatActivity {
                     edt_contactno.requestFocus();
                     return;
                 }
-                Intent i=new Intent(ForgotpasswordActivity.this,VerificationActivity.class);
-                startActivity(i);
 
+                String url= Constants.Webserive_Url+"forgotpassword.php";
+                HashMap<String,String> params=new HashMap<>();
+                params.put("ContactNo",edt_contactno.getText().toString());
+
+                volley.CallVolley(url,params,"forgotpassword");
 
             }
         });
+    }
+
+    @Override
+    public void getData(JSONObject jsonObject, String tag) {
+        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
     }
 }

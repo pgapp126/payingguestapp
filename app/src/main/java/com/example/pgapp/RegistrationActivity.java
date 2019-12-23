@@ -6,10 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.pgapp.utils.Commonfunction;
+import com.example.pgapp.utils.Constants;
+import com.example.pgapp.utils.DataInterface;
+import com.example.pgapp.utils.Webservice_Volley;
 
-public class RegistrationActivity extends AppCompatActivity {
+import org.json.JSONObject;
+
+import java.util.HashMap;
+
+public class RegistrationActivity extends AppCompatActivity implements DataInterface {
     EditText edt_username;
     EditText edt_contactno;
     EditText edt_email;
@@ -17,6 +25,7 @@ public class RegistrationActivity extends AppCompatActivity {
     EditText edt_confirmpsw;
     Button btn_signup;
 
+    Webservice_Volley volley;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +38,7 @@ public class RegistrationActivity extends AppCompatActivity {
         edt_confirmpsw=(EditText)findViewById(R.id.edt_confirmpsw);
         btn_signup=(Button)findViewById(R.id.btn_signup);
 
+        volley=new Webservice_Volley(this,this);
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,9 +79,25 @@ public class RegistrationActivity extends AppCompatActivity {
                     return;
                 }
 
+                String url= Constants.Webserive_Url+"registration.php";
+                HashMap<String,String> params=new HashMap<>();
+                params.put("Username",edt_username.getText().toString());
+                params.put("ContactNo",edt_contactno.getText().toString());
+                params.put("Email",edt_email.getText().toString());
+                params.put("Password",edt_psw.getText().toString());
+                params.put("ProfilePicture","");
+                params.put("IdentityProof","");
+
+                volley.CallVolley(url,params,"registration");
+
 
             }
         });
 
             }
+
+    @Override
+    public void getData(JSONObject jsonObject, String tag) {
+        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+    }
 }
