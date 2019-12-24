@@ -2,6 +2,7 @@ package com.example.pgapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -81,7 +82,7 @@ public class RegistrationActivity extends AppCompatActivity implements DataInter
 
                 String url= Constants.Webserive_Url+"registration.php";
                 HashMap<String,String> params=new HashMap<>();
-                params.put("Username",edt_username.getText().toString());
+                params.put("UserName",edt_username.getText().toString());
                 params.put("ContactNo",edt_contactno.getText().toString());
                 params.put("Email",edt_email.getText().toString());
                 params.put("Password",edt_psw.getText().toString());
@@ -98,6 +99,23 @@ public class RegistrationActivity extends AppCompatActivity implements DataInter
 
     @Override
     public void getData(JSONObject jsonObject, String tag) {
-        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+
+        try {
+
+            Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+
+            if (jsonObject.getString("response").equalsIgnoreCase("1")) {
+                Intent i = new Intent(RegistrationActivity.this,LoginActivity.class);
+                startActivity(i);
+
+                finish();
+            }
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
     }
 }

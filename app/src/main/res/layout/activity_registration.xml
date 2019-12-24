@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".RegistrationActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:padding="24dp">
 
     <TextView
         android:id="@+id/textView"
@@ -14,70 +15,77 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="20sp"
-        android:text="Sign Up" />
+        android:textSize="30sp"
+        android:text="Sign Up"
+        android:textColor="@android:color/black"/>
 
     <EditText
         android:id="@+id/edt_username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="UserName"
         android:textSize="18sp"
         android:gravity="center"
         android:inputType="textPersonName"
+        android:layout_marginTop="24dp"
         tools:layout_editor_absoluteX="80dp"
         tools:layout_editor_absoluteY="-9dp" />
 
     <EditText
         android:id="@+id/edt_contactno"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:ems="10"
         android:gravity="center"
         android:hint="ContactNo"
         android:textSize="18sp"
         android:inputType="phone"
+        android:layout_marginTop="24dp"
         tools:layout_editor_absoluteX="151dp"
         tools:layout_editor_absoluteY="45dp" />
 
     <EditText
         android:id="@+id/edt_email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:ems="10"
         android:textSize="18sp"
         android:gravity="center"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:layout_marginTop="24dp"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="114dp" />
 
     <EditText
         android:id="@+id/edt_psw"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:ems="10"
         android:textSize="18sp"
         android:gravity="center"
         android:hint="Password"
+        android:layout_marginTop="24dp"
         android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/edt_confirmpsw"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:ems="10"
         android:gravity="center"
         android:textSize="18sp"
         android:hint="ConfirmPassword"
+        android:layout_marginTop="24dp"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btn_signup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:textSize="18sp"
+        android:layout_marginTop="24dp"
         android:text="Sign Up" />
 
 

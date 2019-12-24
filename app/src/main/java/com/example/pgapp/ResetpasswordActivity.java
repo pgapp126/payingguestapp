@@ -2,6 +2,7 @@ package com.example.pgapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,8 @@ public class ResetpasswordActivity extends AppCompatActivity implements DataInte
 
         volley=new Webservice_Volley(this,this);
 
+        userid = getIntent().hasExtra("id") ? getIntent().getStringExtra("id") : "0";
+
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +72,22 @@ public class ResetpasswordActivity extends AppCompatActivity implements DataInte
 
     @Override
     public void getData(JSONObject jsonObject, String tag) {
-        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+
+        try {
+
+            Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+
+            if (jsonObject.getString("response").equalsIgnoreCase("1")) {
+                Intent i = new Intent(ResetpasswordActivity.this,LoginActivity.class);
+                startActivity(i);
+
+                finish();
+            }
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

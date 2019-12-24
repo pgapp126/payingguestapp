@@ -54,6 +54,31 @@ public class ForgotpasswordActivity extends AppCompatActivity implements DataInt
 
     @Override
     public void getData(JSONObject jsonObject, String tag) {
-        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+
+
+        try {
+
+            Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+
+            if (jsonObject.getString("response").equalsIgnoreCase("1")) {
+
+                String id = jsonObject.getString("id");
+                String code = jsonObject.getString("verificationcode");
+
+                Toast.makeText(this, "Verification code is : " + code, Toast.LENGTH_LONG).show();
+
+                Intent i = new Intent(ForgotpasswordActivity.this,VerificationActivity.class);
+                i.putExtra("id",id);
+                i.putExtra("code",code);
+                startActivity(i);
+
+                finish();
+            }
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
