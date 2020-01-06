@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pgapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,27 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ResetpasswordActivity">
-        </activity>
-        <activity android:name=".VerificationActivity" >
+        <activity android:name=".SplashscreenActivity" android:theme="@style/AppTheme.NoActionBar">
 
-        </activity>
-        <activity android:name=".ForgotpasswordActivity" >
-
-        </activity>
-        <activity android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".RegistrationActivity" >
 
         </activity>
-        <activity android:name=".MainActivity">
-            </activity>
+        <activity android:name=".ResetpasswordActivity"></activity>
+        <activity android:name=".VerificationActivity"></activity>
+        <activity android:name=".ForgotpasswordActivity"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+          </activity>
+        <activity android:name=".RegistrationActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
