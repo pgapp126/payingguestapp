@@ -34,14 +34,16 @@ public class ProfileActivity extends AppCompatActivity {
                     edt_username.requestFocus();
                     return;
                 }
-                public void onClick(View v) {
+                public void onClick(View v)
+                {
                     if(!Commonfunction.checkMobileNo(edt_contactno.getText().toString()))
                     {
                         edt_contactno.setError("Enter 10 digit contact number");
                         edt_contactno.requestFocus();
                         return;
                     }
-                    public void onClick(View v) {
+                    public void onClick(View v)
+                    {
                         if(!Commonfunction.checkMobileNo(edt_email.getText().toString()))
                         {
                             edt_email.setError("Enter valid Email");
