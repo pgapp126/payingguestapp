@@ -5,18 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashscreenActivity"
-    android:background="#FFF"
+    android:background="#fff"
     >
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_marginTop="1sp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerInParent="true"
         app:srcCompat="@drawable/home4" />
-
-
 
 </android.widget.RelativeLayout>
