@@ -28,7 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
         btn_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!Commonfunction.checkMobileNo(edt_username.getText().toString())) {
+                if (!Commonfunction.checkString(edt_username.getText().toString())) {
                     edt_username.setError("Enter User name");
                     edt_username.requestFocus();
                     return;
@@ -38,7 +38,7 @@ public class ProfileActivity extends AppCompatActivity {
                     edt_contactno.requestFocus();
                     return;
                 }
-                if (!Commonfunction.checkMobileNo(edt_email.getText().toString())) {
+                if (!Commonfunction.checkEmail(edt_email.getText().toString())) {
                     edt_email.setError("Enter valid Email");
                     edt_email.requestFocus();
                     return;

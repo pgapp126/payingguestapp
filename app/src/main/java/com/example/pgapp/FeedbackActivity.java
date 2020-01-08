@@ -27,7 +27,7 @@ public class FeedbackActivity extends AppCompatActivity {
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!Commonfunction.checkMobileNo(edt_comments.getText().toString()))
+                if(!Commonfunction.checkString(edt_comments.getText().toString()))
                 {
                     edt_comments.setError("Enter your comments");
                     edt_comments.requestFocus();

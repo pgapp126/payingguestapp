@@ -16,13 +16,14 @@
         <activity android:name=".SearchpropertyActivity" />
         <activity android:name=".MybookingActivity" />
         <activity android:name=".ProfileActivity" >
-        </activity>
-        <activity android:name=".FeedbackActivity" >
-        <intent-filter>
+            <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            </intent-filter>
+        </activity>
+        <activity android:name=".FeedbackActivity" >
+
         </activity>
         <activity
             android:name=".SplashscreenActivity"
