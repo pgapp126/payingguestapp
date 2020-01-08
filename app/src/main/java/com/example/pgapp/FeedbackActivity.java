@@ -33,9 +33,7 @@ public class FeedbackActivity extends AppCompatActivity {
                     edt_comments.requestFocus();
                     return;
                 }
-
-
             }
-}
+});
     }
 }

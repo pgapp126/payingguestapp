@@ -28,29 +28,23 @@ public class ProfileActivity extends AppCompatActivity {
         btn_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!Commonfunction.checkMobileNo(edt_username.getText().toString()))
-                {
+                if (!Commonfunction.checkMobileNo(edt_username.getText().toString())) {
                     edt_username.setError("Enter User name");
                     edt_username.requestFocus();
                     return;
                 }
-                public void onClick(View v)
-                {
-                    if(!Commonfunction.checkMobileNo(edt_contactno.getText().toString()))
-                    {
-                        edt_contactno.setError("Enter 10 digit contact number");
-                        edt_contactno.requestFocus();
-                        return;
-                    }
-                    public void onClick(View v)
-                    {
-                        if(!Commonfunction.checkMobileNo(edt_email.getText().toString()))
-                        {
-                            edt_email.setError("Enter valid Email");
-                            edt_email.requestFocus();
-                            return;
-                        }
-
-
+                if (!Commonfunction.checkMobileNo(edt_contactno.getText().toString())) {
+                    edt_contactno.setError("Enter 10 digit contact number");
+                    edt_contactno.requestFocus();
+                    return;
                 }
+                if (!Commonfunction.checkMobileNo(edt_email.getText().toString())) {
+                    edt_email.setError("Enter valid Email");
+                    edt_email.requestFocus();
+                    return;
+                }
+            }
+        }
+        );
+}
 }
