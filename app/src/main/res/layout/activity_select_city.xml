@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="right"
+    tools:context=".SelectCityActivity"
+    android:background="#f4f4f4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#dcdcdc">
+
+    <EditText
+        android:id="@+id/edt_searchcity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="16dp"
+        android:hint="Search City"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_action_search"
+        android:drawablePadding="8dp"
+        android:inputType="text"
+        android:background="@android:color/white"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_mylocation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Detect My Location"
+        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        android:paddingLeft="24dp"
+        android:textStyle="normal"
+        android:gravity="center_vertical"
+        android:textColor="#0000ff"
+        android:drawableLeft="@drawable/ic_action_location"
+        android:drawableTint="#0000ff"
+        android:drawablePadding="8dp"
+        android:background="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/txt_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CITIES"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:textColor="#3c3c3c" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

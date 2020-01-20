@@ -12,17 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PostPgAdActivity"></activity>
-        <activity android:name=".ViewpaymentActivity" />
-        <activity android:name=".SearchpropertyActivity" />
-        <activity android:name=".MybookingActivity" />
-        <activity android:name=".ProfileActivity">
+        <activity android:name=".SelectCityActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ViewpaymentActivity" />
+        <activity android:name=".SearchpropertyActivity" />
+        <activity android:name=".MybookingActivity" />
+        <activity android:name=".ProfileActivity"></activity>
         <activity android:name=".FeedbackActivity"></activity>
         <activity
             android:name=".SplashscreenActivity"
