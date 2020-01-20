@@ -22,9 +22,7 @@
         <activity android:name=".ViewpaymentActivity" />
         <activity android:name=".SearchpropertyActivity" />
         <activity android:name=".MybookingActivity" />
-        <activity android:name=".ProfileActivity">
-
-        </activity>
+        <activity android:name=".ProfileActivity"></activity>
         <activity android:name=".FeedbackActivity"></activity>
         <activity
             android:name=".SplashscreenActivity"
