@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".PgAddListActivity"></activity>
         <activity android:name=".SelectCityActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,10 +23,11 @@
         <activity android:name=".ViewpaymentActivity" />
         <activity android:name=".SearchpropertyActivity" />
         <activity android:name=".MybookingActivity" />
-        <activity android:name=".ProfileActivity"></activity>
-        <activity android:name=".FeedbackActivity"></activity>
-        <activity android:name=".SplashscreenActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".FeedbackActivity" />
+        <activity
+            android:name=".SplashscreenActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ResetpasswordActivity" />
         <activity android:name=".VerificationActivity" />
         <activity android:name=".ForgotpasswordActivity" />
