@@ -16,11 +16,7 @@
         <activity android:name=".PostPgAdActivity" />
         <activity android:name=".PgAddListActivity" />
         <activity android:name=".SelectCityActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ViewpaymentActivity" />
         <activity android:name=".SearchpropertyActivity" />
@@ -30,12 +26,22 @@
         <activity
             android:name=".SplashscreenActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ResetpasswordActivity" />
+        <activity android:name=".ResetpasswordActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".VerificationActivity" />
         <activity android:name=".ForgotpasswordActivity" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+
+
+        </activity>
+
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".MainActivity" />
     </application>
